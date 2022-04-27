@@ -1,0 +1,29 @@
+{
+  "name": "telegram-sender",
+  "version": "1.0.0",
+  "description": "Api that sends messages to telegram",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qupkiii/telegram-sender.git"
+  },
+  "author": "Qupkiii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Qupkiii/telegram-sender/issues"
+  },
+  "homepage": "https://github.com/Qupkiii/telegram-sender#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "mongoose": "^6.3.1",
+    "node-fetch": "^2.6.7",
+    "node-telegram-bot-api": "^0.57.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
