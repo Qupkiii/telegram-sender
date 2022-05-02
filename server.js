@@ -1,8 +1,9 @@
-//require('dotenv').config()
+require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
+
 
 mongoose.connect(process.env.DATABESE_URL_MONGO)
     .then((res) => {
@@ -16,8 +17,10 @@ db.once('open', () => console.log('Connected to DB'))
 app.use(express.json())
 
 const telegramRouter = require('./routes/telegram')
-const {response} = require("express");
 app.use('/telegram', telegramRouter)
+
+const plusOneRouter = require('./routes/plusone')
+app.use('/plusone', plusOneRouter)
 
 const bot = require('./telegramBot')
 const fetch = require("node-fetch");
